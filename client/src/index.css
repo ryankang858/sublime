@@ -22,12 +22,6 @@ body {
   background: #ccc;
 }
 
-button {
-  margin: 2rem;
-}
-
-
-
 .button-3d {
   display: inline-block;
   position: relative;
@@ -115,10 +109,6 @@ button {
   width: 135px;
 }
 
-.search-submit-btn {
-
-}
-
 .btn-margin {
   margin: 0px;
 }
@@ -195,4 +185,25 @@ button {
   width: 88%;
   height: 500px;
   background-image: url("https://www.mooreseal.com/wp-content/uploads/2013/11/dummy-image-square.jpg");
+}
+
+.blue-submit-button {
+  margin: 2rem;
+  background-color: lightsteelblue;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Montserrat";
+  border-radius: 8px;
+}
+
+.btn-group {
+  margin: 12px, 12px, 12px, 12px;
+  border-radius: 50%;
+}
+
+.btn-topics {
+  background-color:cadetblue;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Montserrat";
 }

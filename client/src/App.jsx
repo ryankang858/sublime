@@ -1,9 +1,10 @@
 import { Nav } from "./components/Nav";
 import { Home } from "./page/Home";
 import { Sublimation } from "./page/Sublimation";
-import { Stories } from "./page/Stories";
 import { Passions } from "./page/Passions";
+import { Actions } from "./page/Actions";
 import { Discussions } from "./page/Discussions";
+import { Form } from "./components/Form";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -15,11 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sublimation" element={<Sublimation />} />
-          <Route path="/stories" element={<Stories />} />
           <Route path="/passions" element={<Passions />} />
+          <Route path="/actions" element={<Actions />} />
           <Route path="/discussions" element={<Discussions />} />
         </Routes>
       </BrowserRouter>
+  
     </div>
   );
 }

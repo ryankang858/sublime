@@ -27,8 +27,8 @@ export const Nav = () => {
               </Link>
             </li>
             <li className="nav-item  nav-bluebutton">
-              <Link className="nav-link nav-font button-3d" to={"/stories"}>
-                Our Stories
+              <Link className="nav-link nav-font button-3d" to={"/Do"}>
+                What we Do
               </Link>
             </li>
             <li className="nav-link nav-font button-3d dropdown nav-bluebutton dropdown-style">
@@ -48,9 +48,9 @@ export const Nav = () => {
                   </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={"/actions"}>
                     Actions
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to={"/discussions"}>

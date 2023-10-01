@@ -18,4 +18,9 @@ INSERT INTO comments (name, comment, topic, date)
 VALUES
 ("Anonymous", "I play sports to relieve stress and get away from my thoughts, but the pressures of being an athlete sometimes stress me even more. Any way out???", "Sports", "2023-06-22"),
 ("John Doe", "WHY IS GAMING SO HATED WHEN EVERYONE LOVES GAMES?!?!?!?!", "Gaming", "2023-06-23"),
-("Anonymous", "Is happiness generated through music instigated by making music personally or hearing music in general?", "Music", "2023-06-24");
+("Anonymous", "Is happiness generated through music instigated by making music personally or hearing music in general?", "Music", "2023-06-24"),
+("Anonymous", "Can school be a method of sublimation?", "discussions", "Other", "2023-07-27"),
+("Johnny Appleseed", "Lorem ipsum dolor", "actions", "Other", "2023-07-28"),
+("Anonymous", "Lorem ipsum dolor dolor", "discussions", "Other", "2023-07-30");
+
+
