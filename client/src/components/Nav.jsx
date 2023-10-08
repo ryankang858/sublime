@@ -31,7 +31,37 @@ export const Nav = () => {
                 What we Do
               </Link>
             </li>
-            <li className="nav-link nav-font button-3d dropdown nav-bluebutton dropdown-style">
+            <div class="dropdown  d-flex">
+              <button className="dropdown nav-bluebutton custom-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Community
+              </button>
+              <ul className="dropdown-menu">
+                <li><a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={"/passions"}>
+                    Passions
+                  </Link></a></li>
+                <li><a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={"/actions"}>
+                    Actions
+                  </Link></a></li>
+                <li><a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={"/discussions"}>
+                    Discussions
+                  </Link></a></li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={"/References"}>
+                    References
+                  </Link>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+            {/* <li className="nav-link nav-font button-3d dropdown nav-bluebutton dropdown-style">
               <a
                 className="nav-link dropdown-toggle nav-font"
                 href="#"
@@ -67,7 +97,7 @@ export const Nav = () => {
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
           <form className="searchbar d-flex" role="search">
             <input
               className="form-control me-2"

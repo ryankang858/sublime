@@ -6,20 +6,59 @@ export const Form = () => {
     const [comment, setComment] = useState("")
     const [type, setType] = useState("");
     const [topic, setTopic] = useState("");
+    const [error, setError] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const payload = {name, comment, type, topic, date: new Date().toISOString().slice(0, 19).replace('T', ' ')}
+        const payload = { name, comment, type, topic, date: new Date().toISOString().slice(0, 19).replace('T', ' ') }
 
-        console.log("payload",payload);
+        console.log("payload", payload);
 
-        const res = await axios.post("/api/comments",JSON.stringify(payload),{
+        if (!name) {
+            console.error("Name/Anonymous is required");
+            setError("Name/Anonymous is required")
+            return;
+        }
+
+        if (!comment) {
+            console.error("Comment is required");
+            setError("Comment is required")
+            return;
+        }
+
+        if (!type) {
+            console.error("Section data is missing");
+            setError("Section is required")
+            return;
+        }
+
+        if (!topic) {
+            console.error("Topic is required");
+            setError("Topic is required")
+            return;
+        }
+
+        const res = await axios.post("/api/comments", JSON.stringify(payload), {
             headers: {
-              'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             }
-          });
+        });
         console.log(res);
+    }
+
+    const renderError = () => {
+        let result = null;
+
+        if (error) {
+            result = (
+                <div className="error-message">
+                    {error}
+                </div>
+            )
+        }
+
+        return result
     }
 
     return (
@@ -35,7 +74,7 @@ export const Form = () => {
                     (e) => {
                         setName("Anonymous")
                     }
-                }/>
+                } />
                 <label className="anonymous-check-label" htmlFor="anonymousCheck">Post anonymously</label>
             </div>
             <div className="mb-3">
@@ -44,7 +83,7 @@ export const Form = () => {
                     (e) => {
                         setComment(e.target.value)
                     }
-                }/>
+                } />
             </div>
             <div>
                 <label htmlFor="inputType" className="form-label">Section</label>
@@ -60,7 +99,7 @@ export const Form = () => {
                 </select>
             </div>
             <div>
-                <label htmlFor="inputTopic" className="form-label">Category</label>
+                <label htmlFor="inputTopic" className="form-label">Topic</label>
                 <select name="inputTopic" className="form-select" value={topic} onChange={
                     (e) => {
                         setTopic(e.target.value)
@@ -81,6 +120,7 @@ export const Form = () => {
                 </select>
             </div>
             <button type="submit" className="blue-submit-button">Submit</button>
+            {renderError()}
         </form>
     );
 };

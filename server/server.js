@@ -1,12 +1,19 @@
 const express = require("express");
 const app = express();
-const PORT = 4000;
-const fs = require("fs");
+const PORT = process.env.PORT || 4000;
 const path = require("path");
 const connection = require("./db/connection");
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname,'../client/build')));
+}
+
+app.get("/", (req,res) => {
+    res.sendFile(path.join(__dirname,'../client/'))
+})
 
 app.get('/api/comments', (req,res) => {
     const query = `SELECT * FROM comments`;

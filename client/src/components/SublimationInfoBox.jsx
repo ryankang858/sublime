@@ -15,7 +15,7 @@ export const SublimationInfoBox = () => {
               depression.
             </p>
             <p className="sublimation-info-text2">
-              Project Sublime was made by teenage students who had experienced
+              Project Sublime was conceptualized by teenage students who had experienced
               forms of depression in the past and found a productive outlet to
               overcome their challenges.
             </p>
@@ -23,10 +23,9 @@ export const SublimationInfoBox = () => {
         </div>
         <div className="sublimation-info-image"></div>
       </div>
-      <Link className="btn btn-outline-secondary" to={"/stories"}>
-        Hear our stories
+      <Link className="btn btn-outline-secondary" to={"/Do"}>
+        What do we do?
       </Link>
-      ;
     </>
   );
 };
