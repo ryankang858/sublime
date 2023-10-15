@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import logo from '../img/Sublime_logo_black.png'
 
 export const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg nav-bar">
       <div className="container-fluid">
         <Link className="navbar-brand navbar-title" to={"/"}>
-          Project Sublime
+          <img src={logo}/>
         </Link>
         <button
           className="navbar-toggler"
