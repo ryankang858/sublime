@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import logo from '../img/Sublime_logo_black.png'
+import logo from '../img/sublime_logo_2.png'
 
 export const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg nav-bar">
       <div className="container-fluid">
         <Link className="navbar-brand navbar-title" to={"/"}>
-          <img src={logo}/>
+          <img src={logo} />
         </Link>
         <button
           className="navbar-toggler"
@@ -28,7 +28,7 @@ export const Nav = () => {
               </Link>
             </li>
             <li className="nav-item  nav-bluebutton">
-              <Link className="nav-link nav-font button-3d" to={"/Do"}>
+              <Link className="nav-link nav-font button-3d" to={"/do"}>
                 What we Do
               </Link>
             </li>
@@ -37,6 +37,16 @@ export const Nav = () => {
                 Community
               </button>
               <ul className="dropdown-menu">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={"/forumguide"}>
+                      Forum Guide
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
                 <li><a className="dropdown-item" href="#">
                   <Link className="dropdown-item" to={"/passions"}>
                     Passions
@@ -49,20 +59,10 @@ export const Nav = () => {
                   <Link className="dropdown-item" to={"/discussions"}>
                     Discussions
                   </Link></a></li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                  <Link className="dropdown-item" to={"/References"}>
-                    References
-                  </Link>
-                  </a>
-                </li>
               </ul>
             </div>
           </ul>
-            {/* <li className="nav-link nav-font button-3d dropdown nav-bluebutton dropdown-style">
+          {/* <li className="nav-link nav-font button-3d dropdown nav-bluebutton dropdown-style">
               <a
                 className="nav-link dropdown-toggle nav-font"
                 href="#"

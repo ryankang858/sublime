@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Montserrat:wght@400;500&display=swap');
+
 .nav-bar {
   background-color: antiquewhite;
   height: 80px;
@@ -73,6 +75,9 @@ body {
   height: 44px;
 }
 
+
+
+
 .about-box {
   background-color: lightsteelblue;
   color: rgb(0, 0, 0);
@@ -88,38 +93,43 @@ body {
   background-color: rgb(224, 224, 224);
 }
 
-.sublimation-info-color {
-  background-color:whitesmoke;
-}
 
-.sublimation-info-box {
-  display: flex;
-  background-color: whitesmoke;
-}
+
+
 
 .sublimation-all-text-div {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 72%;
 }
 
 .sublimation-content-text-div {
   display: flex;
   height: 100%;
+  margin-top: 20px;
+  font-family: 'Montserrat';
+  font-size: 20px;
 }
 
 .sublimation-info-header-div {
   display: flex;
-  padding: 0px 0px 0px 16px;
+  font-family: 'Josefin Sans';
+  font-size: large;
+  align-items: center;
 }
 
 .sublimation-info-box {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  background-color: lightsteelblue;
 }
 
 .sublimation-info-text1 {
   display: flex;
-  padding: 0px 8px 16px 16px
+  padding: 0px 8px 16px 32px
 }
 
 .sublimation-info-text2 {
@@ -128,9 +138,204 @@ body {
 }
 
 .sublimation-info-image {
-  width: 88%;
+  width: 64%;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.do-button-sublimation {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+
+.text-and-button-box {
+  margin: 48px 40px 24px 40px;
+}
+
+.sublimation-to-do-button {
+  margin: 8px 40px 32px 40px;
+}
+
+
+
+
+
+
+.do-all-text-div {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 16px 16px 16px;
+}
+
+.do-content-text-div {
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin-left: 48px;
+  display: flex;
+}
+
+.do-info-header-div {
+  padding: 0px 0px 0px 24px;
+  font-family: 'Josefin Sans';
+  font-size: large;
+  margin-left: 64px;
+}
+
+.do-info-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightsteelblue;
+}
+
+.do-info-intro-box {
+  align-items: center;
+  text-align: center;
+}
+
+.do-info-text1 {
+  align-items: center;
+}
+
+.do-subheader {
+  display: flex;
+  margin: 40px 16px 32px 240px;
+  font-family: 'Josefin Sans';
+  font-size: xx-large;
+  align-items: center;
+}
+
+.do-info-subheader1 {
+  margin-top: 64px;
+}
+
+.do-body-text {
+  width: 70%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin: auto;
+  font-family: 'Montserrat';
+  font-size: 20px;
+}
+
+.do-image-1 {
+  width: 500px;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.do-image-2 {
+  width: 80%;
   height: 500px;
-  background-image: url("https://www.mooreseal.com/wp-content/uploads/2013/11/dummy-image-square.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.do-to-forum-btn {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+
+
+
+
+
+
+
+
+.forum-guide-all-text-div {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 16px 64px 16px
+}
+
+.forum-guide-content-text-div {
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin-left: 48px;
+}
+
+.forum-guide-info-header-div {
+  display: flex;
+  padding: 0px 0px 0px 24px;
+  font-family: 'Josefin Sans';
+  font-size: large;
+  margin-left: 64px;
+}
+
+.forum-guide-info-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightsteelblue;
+  padding-bottom: 160px;
+}
+
+.forum-guide-to-forum-button {
+  align-items: center;
+
+}
+
+.forum-guide-info-section {
+  margin: 32px 16px 32px 16px
+}
+
+.forum-guide-info-text1 {
+  display: flex;
+}
+
+.forum-guide-types-text {
+  display: flex;
+  align-items: center;
+}
+
+.forum-guide-subheader {
+  display: flex;
+  margin: 40px 16px 32px 16px;
+  font-family: 'Josefin Sans';
+  font-size: xx-large;
+  align-items: center;
+}
+
+.forum-guide-info-subheader1 {
+  margin-top: 64px;
+}
+
+.forum-guide-body-text {
+  width: 70%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin: 24px 16px 24px 16px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+}
+
+.forums-title {
+  display: flex;
+  padding: 32px 24px 16px 24px;
+  font-family: 'Josefin Sans';
+  font-size: 64px;
+  margin: auto;
 }
 
 .blue-submit-button {
@@ -140,6 +345,7 @@ body {
   font-weight: bold;
   font-family: "Montserrat";
   border-radius: 8px;
+  margin-bottom: 48px;
 }
 
 .btn-group {
@@ -161,6 +367,16 @@ body {
   font-family: "Montserrat";
 }
 
-.Form {
-  margin: 16px, 16px, 16px, 16px;
+.form-div {
+  margin: auto;
+  padding: 32px 48px 240px 48px;
+  border-radius: 24px;
+  border-color: black;
+  align-items: center;
+  background-color: lightsteelblue;
+}
+
+
+.forum-topic-buttons {
+  margin-left: 64px;
 }

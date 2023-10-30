@@ -85,88 +85,91 @@ export const Discussions = () => {
 
   return (
     <>
-        <Form />
-        <div className="btn-group" role="group" aria-label="Basic example">
-                <button
-                    onClick={() => handleChoiceSelection("Gaming")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Sports
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("Music")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Music
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("Sports")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Arts & Crafts
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Gaming
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    School
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Tech & Engineering
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Science
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Math
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Humanities & History
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Photography & Videography
-                </button>
-                <button
-                    onClick={() => handleChoiceSelection("ArtsAndCrafts")}
-                    type="button"
-                    className="btn btn-primary btn-topics"
-                >
-                    Other
-                </button>
-            </div>
+      <div className="form-div">
+        <h1 className="forums-title">Discussions</h1>
+        <Form className="form" />
+        <div className="btn-group forum-topic-buttons" role="group" aria-label="Basic example">
+          <button
+            onClick={() => handleChoiceSelection("Gaming")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Sports
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("Music")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Music
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("Sports")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Arts & Crafts
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Gaming
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            School
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Tech & Engineering
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Science
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Math
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Humanities & History
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Photography & Videography
+          </button>
+          <button
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            type="button"
+            className="btn btn-primary btn-topics"
+          >
+            Other
+          </button>
+        </div>
 
-      <div>{renderComents(userChoice)}</div>
+        <div>{renderComents(userChoice)}</div>
+      </div>
     </>
   );
 };
