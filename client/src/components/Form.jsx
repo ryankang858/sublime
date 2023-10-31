@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-export const Form = () => {
+export const Form = ({handleGetData}) => {
     const [name, setName] = useState("");
     const [comment, setComment] = useState("")
     const [type, setType] = useState("");
@@ -45,6 +45,8 @@ export const Form = () => {
             }
         });
         console.log(res);
+
+        handleGetData();
     }
 
     const renderError = () => {

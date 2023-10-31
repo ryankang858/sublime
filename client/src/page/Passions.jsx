@@ -8,9 +8,16 @@ export const Passions = () => {
   const [music, setMusic] = useState([]);
   const [sports, setSports] = useState([]);
   const [artsandcrafts, setArtsAndCrafts] = useState([]);
+  const [school, setSchool] = useState([]);
+  const [techandengineering, setTechAndEngineering] = useState([]);
+  const [science, setScience] = useState([]);
+  const [math, setMath] = useState([]);
+  const [humanitiesandhistory, setHumanitiesAndHistory] = useState([]);
+  const [photographyandvideography, setPhotographyAndVideography] = useState([]);
+  const [other, setOther] = useState([]);
   const [userChoice, setUserChoice] = useState("Comments");
 
-  useEffect(() => {
+  const onGetData = () => {
     axios.get("/api/comments").then((res) => {
       const data = res.data.sort((a, b) => {
         const keyA = new Date(a.date),
@@ -23,10 +30,10 @@ export const Passions = () => {
       console.log("data", data);
 
       const passionComments = data.filter(
-        (comment) => comment.type === "passions"
+        (comment) => comment.type === "Passions"
       );
 
-      console.log(passionComments);
+      console.log("**********", passionComments);
 
       const gamingData = passionComments.filter(
         (comment) => comment.topic === "Gaming"
@@ -40,12 +47,44 @@ export const Passions = () => {
       const artsandcraftsData = passionComments.filter(
         (comment) => comment.topic === "ArtsAndCrafts"
       );
+      const schoolData = passionComments.filter(
+        (comment) => comment.topic === "School"
+      );
+      const techandengineeringData = passionComments.filter(
+        (comment) => comment.topic === "TechAndEngineering"
+      );
+      const scienceData = passionComments.filter(
+        (comment) => comment.topic === "Science"
+      );
+      const mathData = passionComments.filter(
+        (comment) => comment.topic === "Math"
+      );
+      const humanitiesandhistoryData = passionComments.filter(
+        (comment) => comment.topic === "HumanitiesAndHistory"
+      );
+      const photographyandvideographyData = passionComments.filter(
+        (comment) => comment.topic === "PhotographyAndVideography"
+      );
+      const otherData = passionComments.filter(
+        (comment) => comment.topic === "Other"
+      );
       setGaming(gamingData);
       setMusic(musicData);
       setComments(passionComments);
       setSports(sportsData);
       setArtsAndCrafts(artsandcraftsData);
+      setSchool(schoolData);
+      setTechAndEngineering(techandengineeringData);
+      setScience(scienceData);
+      setMath(mathData);
+      setHumanitiesAndHistory(humanitiesandhistoryData);
+      setPhotographyAndVideography(photographyandvideographyData);
+      setOther(otherData);
     });
+  }
+
+  useEffect(() => {
+    onGetData();
   }, []);
 
   const renderComents = (topic) => {
@@ -65,6 +104,27 @@ export const Passions = () => {
         break;
       case "ArtsAndCrafts":
         data = artsandcrafts;
+        break;
+      case "School":
+        data = school;
+        break;
+      case "TechAndEngineering":
+        data = techandengineering;
+        break;
+      case "Science":
+        data = science;
+        break;
+      case "Math":
+        data = math;
+        break;
+      case "HumanitiesAndHistory":
+        data = humanitiesandhistory;
+        break;
+      case "PhotographyAndVideography":
+        data = photographyandvideography;
+        break;
+      case "Other":
+        data = other;
         break;
       default:
         data = comments;
@@ -99,10 +159,10 @@ export const Passions = () => {
     <>
       <div className="form-div">
         <h1 className="forums-title">Passions</h1>
-        <Form className="form" />
+        <Form className="form" handleGetData={onGetData} />
         <div className="btn-group forum-topic-buttons" role="group" aria-label="Basic example">
           <button
-            onClick={() => handleChoiceSelection("Gaming")}
+            onClick={() => handleChoiceSelection("Sports")}
             type="button"
             className="btn btn-primary btn-topics"
           >
@@ -116,63 +176,63 @@ export const Passions = () => {
             Music
           </button>
           <button
-            onClick={() => handleChoiceSelection("Sports")}
+            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Arts & Crafts
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("Gaming")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Gaming
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("School")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             School
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("TechAndEngineering")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Tech & Engineering
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("Science")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Science
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("Math")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Math
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("HumanitiesAndHistory")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Humanities & History
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("PhotographyAndVideography")}
             type="button"
             className="btn btn-primary btn-topics"
           >
             Photography & Videography
           </button>
           <button
-            onClick={() => handleChoiceSelection("ArtsAndCrafts")}
+            onClick={() => handleChoiceSelection("Other")}
             type="button"
             className="btn btn-primary btn-topics"
           >
